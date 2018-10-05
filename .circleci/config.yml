@@ -1,6 +1,6 @@
 version: 2
-  test:
-  override:
+jobs:
+  build:
     - echo "overrideing tests"
     - ant -lib lib/ Build: 
         timeout: 600
