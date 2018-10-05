@@ -1,6 +1,5 @@
 version: 2
-        jobs:
-            test:
+  test:
   override:
     - echo "overrideing tests"
     - ant -lib lib/ Build: 
