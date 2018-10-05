@@ -1,6 +1,9 @@
-version: 2
-jobs:
- test:
+workflows:
+    version: 2
+    myWorkflow:
+        jobs:
+            build:
+            test:
   override:
     - ant -lib lib/ Build: 
         timeout: 600
