@@ -1,9 +1,13 @@
-workflows:
-    version: 2
-    myWorkflow:
+version: 2
         jobs:
-            build:
             test:
   override:
+    - echo "overrideing tests"
     - ant -lib lib/ Build: 
         timeout: 600
+
+deployment:
+  production:
+    branch: master
+    commands:
+      - ant -f build.xml -lib lib/ deployCode        
